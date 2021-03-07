@@ -9,6 +9,7 @@
     <meta charset="utf-8" />
     <title>Hello, World! • A-Frame</title>
     <script src="https://aframe.io/aframe/dist/aframe-master.min.js"></script>
+     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
     <meta name="description" content="Hello, World! • A-Frame" />
     <meta
@@ -19,6 +20,7 @@
     <meta aframe-injected="" name="mobile-web-app-capable" content="yes" />
     <meta aframe-injected="" name="theme-color" content="black" />
     <script src="../../../dist/aframe-master.min.js"></script>
+    
     <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
     <style type="text/css" data-href="src/style/aframe.css">
      
@@ -36,19 +38,14 @@
       fog="color: #777; far:150"
       shadow="autoUpdate: true"
     >
+      
       <a-entity
         environment="preset: forest; flatShading: true;  lighting: distant; groundColor:#111; shadowSize: 20;  ground:flat; groundTexture: walkernoise;  dressingAmount: 15; seed: 7;  dressing: trees;  groundColor2:#222; fog:0.7;"
         shadow="cast: true; receive: true;"
         scale="1 1 1"
         visible="true"
-      >
-        <a-entity
-          rotation="-90 1 0"
-          class="environmentGround environment"
-          visible="true"
-          scale="2 2 4.18"
-          shadow="receive: true"
-        ></a-entity>
+      > 
+        
       
       <a-entity
         position="0 1.25 -5"
@@ -75,7 +72,7 @@
       <div class="a-loader-title" style="display: none;">
         Hello, World! • A-Frame
       </div>
-      <a-entity camera="" position="0 2 3" wasd-controls="fly: true" rotation="-7.677634454753011 0.34377467707849674 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+      <a-entity camera="" position="0 3 2" wasd-controls="fly: true" rotation="-7.677634454753011 0.34377467707849674 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
       <div class="a-enter-vr" aframe-injected="">
         <button
           class="a-enter-vr-button"
@@ -105,6 +102,7 @@
         aframe-injected=""
       ></a-entity
     >
+        
       </a-entity>
         </a-scene>
   </body>

@@ -27,6 +27,7 @@
     </style>
     
     
+    
   </head>
   <body>
     <a-scene
@@ -42,7 +43,7 @@
     >
       <a-assets>
         <video id="my-video" src="https://media.istockphoto.com/videos/animation-of-cartoon-school-children-video-id1258743632" loop crossorigin="anonymous" autoplay="true"></video>
-        <img id="my-img" src="https://ugc.futurelearn.com/uploads/images/35/45/promo_small_3545cd14-9cbc-4499-ac92-5e43d53d65f8.jpg" crossorigin="anonymous" />
+        
       </a-assets>
       
       
@@ -55,11 +56,12 @@
         
       
       <a-entity
+        
         position="0 1.25 -5"
-        shadow="cast: true; recieve: false"
+        shadow="cast: true;"
         gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Fscene.gltf?v=1615118351314"
         animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 25000; loop: 1000; from: 0;"                
-        material="src: #my-img"
+        material="src: https://blog.mozvr.com/content/images/2017/12/CodaScreenSnapz001.png; color: #696969; roughness: 1; metalness: 0"
       ></a-entity>
       
       

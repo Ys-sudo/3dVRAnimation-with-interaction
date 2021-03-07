@@ -26,6 +26,8 @@
      
     </style>
     
+    
+    
   </head>
   <body>
     <a-scene
@@ -38,7 +40,9 @@
       fog="color: #777; far:150"
       shadow="autoUpdate: true"
     >
-      
+      <a-assets>
+        <video id="my-video" src="https://media.istockphoto.com/videos/animation-of-cartoon-school-children-video-id1258743632" loop="true" autoplay="true"></video>
+      </a-assets>
       <a-entity
         environment="preset: forest; flatShading: true;  lighting: distant; groundColor:#111; shadowSize: 20;  ground:flat; groundTexture: walkernoise;  dressingAmount: 15; seed: 7;  dressing: trees;  groundColor2:#222; fog:0.7;"
         shadow="cast: true; receive: true;"
@@ -47,17 +51,15 @@
       > 
         
       
-      <a-entity
+      <a-sphere
         position="0 1.25 -5"
         radius="1.25"
-        color="#EF2D5E"
         shadow=""
-        material=""
-        geometry=""
-        wireframe="true"
+        geometry="primitive: sphere;"
         gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Flogo-artopen.gltf?v=1615113337877"
-        animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 25000; loop: 1000; from: 0; isRawProperty: false"                
-      ></a-entity>
+        animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 25000; loop: 1000; from: 0;"                
+        material="src: #my-video"
+      ></a-sphere>
       
       
       <canvas

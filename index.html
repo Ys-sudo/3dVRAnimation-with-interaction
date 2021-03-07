@@ -38,9 +38,10 @@
       device-orientation-permission-ui=""
       fog="color: #777; far:150"
       shadow="autoUpdate: true"
+      renderer="precision: mediump; antialias: false; alpha: false; logarithmicDepthBuffer: true; colorManagement: true;"
     >
       <a-assets>
-        <video id="my-video" src="https://media.istockphoto.com/videos/animation-of-cartoon-school-children-video-id1258743632" loop="true" autoplay="true"></video>
+        <video id="my-video" src="https://media.istockphoto.com/videos/animation-of-cartoon-school-children-video-id1258743632" loop crossorigin="anonymous" autoplay="true"></video>
       </a-assets>
       
       
@@ -54,9 +55,8 @@
       
       <a-entity
         position="0 1.25 -5"
-        shadow=""
-        geometry=""
-        gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Flogo-artopen.gltf?v=1615113337877"
+        shadow="cast: true"
+        gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Flogo-artopen.glb?v=1615117924525"
         animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 25000; loop: 1000; from: 0;"                
         material="src: #my-video"
       ></a-entity>

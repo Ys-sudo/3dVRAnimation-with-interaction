@@ -19,13 +19,12 @@
     />
     <meta aframe-injected="" name="mobile-web-app-capable" content="yes" />
     <meta aframe-injected="" name="theme-color" content="black" />
-    <script src="../../../dist/aframe-master.min.js"></script>
+    
     
     <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
     <style type="text/css" data-href="src/style/aframe.css">
      
     </style>
-    
     
     
   </head>
@@ -43,6 +42,8 @@
       <a-assets>
         <video id="my-video" src="https://media.istockphoto.com/videos/animation-of-cartoon-school-children-video-id1258743632" loop="true" autoplay="true"></video>
       </a-assets>
+      
+      
       <a-entity
         environment="preset: forest; flatShading: true;  lighting: distant; groundColor:#111; shadowSize: 20;  ground:flat; groundTexture: walkernoise;  dressingAmount: 15; seed: 7;  dressing: trees;  groundColor2:#222; fog:0.7;"
         shadow="cast: true; receive: true;"
@@ -51,15 +52,14 @@
       > 
         
       
-      <a-sphere
+      <a-entity
         position="0 1.25 -5"
-        radius="1.25"
         shadow=""
-        geometry="primitive: sphere;"
+        geometry=""
         gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Flogo-artopen.gltf?v=1615113337877"
         animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 25000; loop: 1000; from: 0;"                
         material="src: #my-video"
-      ></a-sphere>
+      ></a-entity>
       
       
       <canvas

@@ -416,6 +416,8 @@
       screenshot=""
       vr-mode-ui=""
       device-orientation-permission-ui=""
+      fog="color: #777; far:150"
+      shadow="autoUpdate: true"
     >
       <a-box
         position="-1 0.5 -3"
@@ -426,12 +428,13 @@
         geometry=""
       ></a-box>
       <a-sphere
-        position="0 1.25 -5"
+        position="0 3.25 -5"
         radius="1.25"
         color="#EF2D5E"
         shadow=""
         material=""
         geometry=""
+        animation="property: object3D.rotation.x; to: 360; dir: alternate; dur: 5000; loop: 1000; from: 0; isRawProperty: false"                
       ></a-sphere>
       <a-cylinder
         position="1 0.75 -3"
@@ -461,7 +464,7 @@
       <div class="a-loader-title" style="display: none;">
         Hello, World! • A-Frame
       </div>
-      <a-entity camera="" position="0 1.5 3" wasd-controls="fly: true" rotation="-7.677634454753011 0.34377467707849674 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+      <a-entity camera="" position="0 1.5 2" wasd-controls="fly: true" rotation="-7.677634454753011 0.34377467707849674 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
       <div class="a-enter-vr" aframe-injected="">
         <button
           class="a-enter-vr-button"

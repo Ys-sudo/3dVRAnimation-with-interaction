@@ -23,9 +23,11 @@
     <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
     <style type="text/css" data-href="src/style/aframe.css"></style>
     <script>
-    function logStuff() {
-      console.log('hi');
+    
+    function sphere(){
+    console.log('hi');
     }
+      
     
     </script>
   </head>
@@ -39,13 +41,13 @@
       device-orientation-permission-ui=""
       fog="color: #777; far:150"
       shadow="autoUpdate: true"
+      stats=""
     >
       <a-assets>
       
       </a-assets>
 
       <a-entity
-        
         shadow="cast: true; receive: true;"
         scale="1 1 1"
         visible="true"
@@ -68,12 +70,10 @@
         ></a-entity>
         <!-- environment="preset: forest; flatShading: true;  lighting: distant; groundColor:#111; shadowSize: 20;  ground:flat; groundTexture: walkernoise;  dressingAmount: 15; seed: 7;  dressing: trees;  groundColor2:#222; fog:0.7;" -->
 
-        <canvas
-          class="a-canvas a-grab-cursor"
-          data-aframe-canvas="true"
-          width="960"
-          height="776"
-        ></canvas>
+        <a-sphere onclick="sphere()" id="sphere15" visible="true" position="1 5 -7" radius="1" material="ambientOcclusionMapIntensity: NaN; color: #ffe757; displacementMap: [object HTMLImageElement]; displacementBias: 0.2" geometry=""
+          animation__mouseenter="property: components.material.material.color; type: color; to: #ffc828;startEvents: mouseenter; dur: 500"
+          animation__mouseleave="property: components.material.material.color; type: color; to: #bf3661; startEvents: mouseleave; dur: 500">
+        </a-sphere>
 
         <div class="a-loader-title" style="display: none;">
           ART OPEN WEB VR • A-Frame

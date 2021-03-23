@@ -54,8 +54,8 @@
         scale="1 1 1"
         visible="true"
       >
-      <a-entity geometry="box" position="0 -2 0" scale="30 1 30"></a-entity>
-      <a-entity geometry="box" scale="20 1 30" position="14.64 9.56 -0.04" rotation="180 180 90"></a-entity>
+      <a-box geometry="box" position="0 -2 0" scale="30 1 30" shadow="cast: true; receive: true;"></a-box>
+      <a-box geometry="box" scale="20 1 30" position="14.64 9.56 -0.04" rotation="180 180 90" shadow="cast: true; receive: true;"></a-box>
         <a-entity
           onclick="sphere()"
           position="0 2 -5"
@@ -74,10 +74,16 @@
         ></a-entity>
         <!-- environment="preset: forest; flatShading: true;  lighting: distant; groundColor:#111; shadowSize: 20;  ground:flat; groundTexture: walkernoise;  dressingAmount: 15; seed: 7;  dressing: trees;  groundColor2:#222; fog:0.7;" -->
 
-        <a-sphere onclick="sphere()" id="sphere15" visible="true" position="1 5 -7" radius="1" material="color: #ffe757;" geometry=""
-          animation__mouseenter="property: components.material.material.color; type: color; to: #ffc828;startEvents: mouseenter; dur: 500"
-          animation__mouseleave="property: components.material.material.color; type: color; to: #bf3661; startEvents: mouseleave; dur: 500">
+        <a-sphere onclick="sphere()"  visible="true" position="1 5 7" radius="1" material="color: #23C495;" geometry="" shadow="cast: true; receive: true;"
+          animation__mouseenter="property: components.material.material.color; type: color; to: #141414;startEvents: mouseenter; dur: 500"
+          animation__mouseleave="property: components.material.material.color; type: color; to: #23C495; startEvents: mouseleave; dur: 500">
         </a-sphere>
+        
+        <a-sphere onclick="sphere()"  visible="true" position="8 1 12" radius="1" material="color: #23C495;" geometry="" shadow="cast: true; receive: true;"
+          animation__mouseenter="property: components.material.material.color; type: color; to: #141414;startEvents: mouseenter; dur: 500"
+          animation__mouseleave="property: components.material.material.color; type: color; to: #23C495; startEvents: mouseleave; dur: 500">
+        </a-sphere>
+
 
         <div class="a-loader-title" style="display: none;">
           ART OPEN WEB VR • A-Frame
@@ -108,17 +114,7 @@
         <div class="a-orientation-modal a-hidden" aframe-injected="">
           <button aframe-injected="">Exit VR</button>
         </div>
-        <a-entity
-          light=""
-          data-aframe-default-light=""
-          aframe-injected=""
-        ></a-entity
-        ><a-entity
-          light=""
-          position=""
-          data-aframe-default-light=""
-          aframe-injected=""
-        ></a-entity>
+        
       </a-entity>
     </a-scene>
   </body>

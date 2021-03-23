@@ -40,7 +40,7 @@
       vr-mode-ui=""
       device-orientation-permission-ui=""
       fog="color: #777; far:150"
-      shadow="autoUpdate: true"
+      shadow="autoUpdate: true; cast:true; recieve:true"
       stats=""
       embedded
     >
@@ -114,7 +114,8 @@
         <div class="a-orientation-modal a-hidden" aframe-injected="">
           <button aframe-injected="">Exit VR</button>
         </div>
-        
+        <a-entity light="intensity: 0.2; castShadow: true" position="-8.98723 37.68641 -16.96958" data-aframe-default-light="" aframe-injected=""></a-entity>
+        <a-entity light="intensity: 2; castShadow: true; color: #adfacb; groundColor: #ededed; distance: 2" position="-10.44717 18.53346 -16.64492" data-aframe-default-light="" aframe-injected=""></a-entity>
       </a-entity>
     </a-scene>
   </body>

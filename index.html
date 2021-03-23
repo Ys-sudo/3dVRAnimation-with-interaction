@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <title>Hello, World! • A-Frame</title>
     <script src="https://aframe.io/aframe/dist/aframe-master.min.js"></script>
-     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
     <meta name="description" content="Hello, World! • A-Frame" />
     <meta
@@ -19,15 +19,9 @@
     />
     <meta aframe-injected="" name="mobile-web-app-capable" content="yes" />
     <meta aframe-injected="" name="theme-color" content="black" />
-    
-    
+
     <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
-    <style type="text/css" data-href="src/style/aframe.css">
-     
-    </style>
-    
-    
-    
+    <style type="text/css" data-href="src/style/aframe.css"></style>
   </head>
   <body>
     <a-scene
@@ -39,77 +33,83 @@
       device-orientation-permission-ui=""
       fog="color: #777; far:150"
       shadow="autoUpdate: true"
-  
     >
       <a-assets>
-        <video id="my-video" src="https://media.istockphoto.com/videos/animation-of-cartoon-school-children-video-id1258743632" loop crossorigin="anonymous" autoplay="true"></video>
-        
+      
       </a-assets>
-      
-      
+
       <a-entity
-        environment="preset: forest; flatShading: true;  lighting: distant; groundColor:#111; shadowSize: 20;  ground:flat; groundTexture: walkernoise;  dressingAmount: 15; seed: 7;  dressing: trees;  groundColor2:#222; fog:0.7;"
+        
         shadow="cast: true; receive: true;"
         scale="1 1 1"
         visible="true"
-      > 
-      
-      
-      
-      <a-entity
-        position="0 1.25 -5"
-        shadow="cast: true;"
-        scale="5 5 5"
-        animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 25000; loop: 1000; from: 0;"
-        gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Falfa-3.glb?v=1616515856727"
-        style="cursor: pointer"
-      ></a-entity>
-      <!--  -->
-      
-      <canvas
-        class="a-canvas a-grab-cursor"
-        data-aframe-canvas="true"
-        width="960"
-        height="776"
-      ></canvas>
-        
-        
-        
-      <div class="a-loader-title" style="display: none;">
-        Hello, World! • A-Frame
-      </div>
-      <a-entity camera="" position="0 3 2" wasd-controls="fly: true" rotation="-7.677634454753011 0.34377467707849674 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
-      <div class="a-enter-vr" aframe-injected="">
-        <button
-          class="a-enter-vr-button"
-          title="Enter VR mode with a headset or fullscreen mode on a desktop. Visit https://webvr.rocks or https://webvr.info for more information."
+      >
+        <a-entity
+          position="0 2 -5"
+          shadow="cast: true;"
+          scale="5 5 5"
+          animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 15000; loop: 1000; from: 0;"
+          gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Fring-1.glb?v=1616516512585"
+        ></a-entity>
+
+        <a-entity
+          position="0 7 -5"
+          shadow="cast: true;"
+          scale="5 5 5"
+          animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 25000; loop: 1000; from: 0;"
+          gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Falfa-3.glb?v=1616515856727"
+          style="cursor: pointer"
+        ></a-entity>
+        <!-- environment="preset: forest; flatShading: true;  lighting: distant; groundColor:#111; shadowSize: 20;  ground:flat; groundTexture: walkernoise;  dressingAmount: 15; seed: 7;  dressing: trees;  groundColor2:#222; fog:0.7;" -->
+
+        <canvas
+          class="a-canvas a-grab-cursor"
+          data-aframe-canvas="true"
+          width="960"
+          height="776"
+        ></canvas>
+
+        <div class="a-loader-title" style="display: none;">
+          ART OPEN WEB VR • A-Frame
+        </div>
+        <a-entity
+          camera=""
+          position="0 10 20"
+          wasd-controls="fly: true"
+          rotation="-7.677634454753011 0.34377467707849674 0"
+          look-controls=""
           aframe-injected=""
-        ></button>
-      </div>
-      <div class="a-enter-ar a-hidden" aframe-injected="">
-        <button
-          class="a-enter-ar-button"
-          title="Enter AR mode with a headset or handheld device. Visit https://webvr.rocks or https://webvr.info for more information."
+          data-aframe-inspector-original-camera=""
+        ></a-entity>
+        <div class="a-enter-vr" aframe-injected="">
+          <button
+            class="a-enter-vr-button"
+            title="Enter VR mode with a headset or fullscreen mode on a desktop. Visit https://webvr.rocks or https://webvr.info for more information."
+            aframe-injected=""
+          ></button>
+        </div>
+        <div class="a-enter-ar a-hidden" aframe-injected="">
+          <button
+            class="a-enter-ar-button"
+            title="Enter AR mode with a headset or handheld device. Visit https://webvr.rocks or https://webvr.info for more information."
+            aframe-injected=""
+          ></button>
+        </div>
+        <div class="a-orientation-modal a-hidden" aframe-injected="">
+          <button aframe-injected="">Exit VR</button>
+        </div>
+        <a-entity
+          light=""
+          data-aframe-default-light=""
           aframe-injected=""
-        ></button>
-      </div>
-      <div class="a-orientation-modal a-hidden" aframe-injected="">
-        <button aframe-injected="">Exit VR</button>
-      </div>
-      <a-entity
-        light=""
-        data-aframe-default-light=""
-        aframe-injected=""
-      ></a-entity
-      ><a-entity
-        light=""
-        position=""
-        data-aframe-default-light=""
-        aframe-injected=""
-      ></a-entity
-    >
-        
+        ></a-entity
+        ><a-entity
+          light=""
+          position=""
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
       </a-entity>
-        </a-scene>
+    </a-scene>
   </body>
 </html>

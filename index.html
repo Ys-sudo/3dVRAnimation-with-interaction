@@ -11,7 +11,7 @@
     <script src="https://aframe.io/aframe/dist/aframe-master.min.js"></script>
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
-    <meta name="description" content="Hello, World! • A-Frame" />
+    <meta name="description" content="Art Open Web VR • A-Frame" />
     <meta
       aframe-injected=""
       name="viewport"
@@ -22,6 +22,12 @@
 
     <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
     <style type="text/css" data-href="src/style/aframe.css"></style>
+    <script>
+    function logStuff() {
+      console.log('hi');
+    }
+    
+    </script>
   </head>
   <body>
     <a-scene
@@ -45,10 +51,11 @@
         visible="true"
       >
         <a-entity
+          onclick="sphere()"
           position="0 2 -5"
           shadow="cast: true;"
           scale="5 5 5"
-          animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 15000; loop: 1000; from: 0;"
+          animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 35000; loop: 1000; from: 0;"
           gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Fring-1.glb?v=1616516512585"
         ></a-entity>
 
@@ -58,7 +65,6 @@
           scale="5 5 5"
           animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 25000; loop: 1000; from: 0;"
           gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Falfa-3.glb?v=1616515856727"
-          style="cursor: pointer"
         ></a-entity>
         <!-- environment="preset: forest; flatShading: true;  lighting: distant; groundColor:#111; shadowSize: 20;  ground:flat; groundTexture: walkernoise;  dressingAmount: 15; seed: 7;  dressing: trees;  groundColor2:#222; fog:0.7;" -->
 

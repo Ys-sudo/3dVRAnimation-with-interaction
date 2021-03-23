@@ -25,7 +25,9 @@
     <script>
     
     function sphere(event){
-    console.log(event.target);
+    let x = (Math.random()*10)+ ' ' + (Math.random()*10) + ' ' + (Math.random()*10);
+    console.log(event.target.getAttribute('position'));
+      event.target.setAttribute('position', x);
     }
       
     
@@ -57,7 +59,6 @@
       <a-box geometry="box" position="0 -2 0" scale="30 1 30" shadow="cast: true; receive: true;"></a-box>
       <a-box geometry="box" scale="20 1 30" position="14.64 9.56 -0.04" rotation="180 180 90" shadow="cast: true; receive: true;"></a-box>
         <a-entity
-          onclick="sphere(event)"
           position="0 2 -5"
           shadow="cast: true;"
           scale="5 5 5"
@@ -74,7 +75,7 @@
         ></a-entity>
         <!-- environment="preset: forest; flatShading: true;  lighting: distant; groundColor:#111; shadowSize: 20;  ground:flat; groundTexture: walkernoise;  dressingAmount: 15; seed: 7;  dressing: trees;  groundColor2:#222; fog:0.7;" -->
 
-        <a-sphere onclick="sphere(even)"  visible="true" position="1 5 7" radius="1" material="color: #23C495;" geometry="" shadow="cast: true; receive: true;"
+        <a-sphere onclick="sphere(event)"  visible="true" position="1 5 7" radius="1" material="color: #23C495;" geometry="" shadow="cast: true; receive: true;"
           animation__mouseenter="property: components.material.material.color; type: color; to: #141414;startEvents: mouseenter; dur: 500"
           animation__mouseleave="property: components.material.material.color; type: color; to: #23C495; startEvents: mouseleave; dur: 500"
           animation="property: object3D.position.y; to: 10; dir: alternate; dur: 5000; loop: 5000; from: 5;"
@@ -82,7 +83,7 @@
           
         </a-sphere>
         
-        <a-sphere onclick="sphere()"  visible="true" position="8 1 12" radius="1" material="color: #23C495;" geometry="" shadow="cast: true; receive: true;"
+        <a-sphere onclick="sphere(event)"  visible="true" position="8 1 12" radius="1" material="color: #23C495;" geometry="" shadow="cast: true; receive: true;"
           animation__mouseenter="property: components.material.material.color; type: color; to: #141414;startEvents: mouseenter; dur: 500"
           animation__mouseleave="property: components.material.material.color; type: color; to: #23C495; startEvents: mouseleave; dur: 500"
           animation="property: object3D.position.x; to: 10; dir: alternate; dur: 5000; loop: 5000; from: 5;"

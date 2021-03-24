@@ -25,7 +25,7 @@
     <script>
     
     function sphere(event){
-    let x = (Math.random()*15)+ ' ' + (Math.random()*15) + ' ' + (Math.random()*15);
+    let x = (((Math.random()) * 2 - 1)*12)+ ' ' + (Math.random()*20) + ' ' + (((Math.random()) * 2 - 1)*12);
     console.log(event.target.getAttribute('position'));
       event.target.setAttribute('position', x);
     }
@@ -34,7 +34,7 @@
     console.log(event.target.getAttribute('position'),event.target.getAttribute('rotation'));
     console.log(document.getElementsByClassName('kula'));
       for (let i=0;i<document.getElementsByClassName('kula').length;i++){
-        let y = (Math.random()*15)+ ' ' + (Math.random()*15) + ' ' + (Math.random()*15);
+        let y = (((Math.random()) * 2 - 1)*12)+ ' ' + (Math.random()*20) + ' ' + (((Math.random()) * 2 - 1)*12);
         console.log(y);
         document.getElementsByClassName('kula')[i].setAttribute('position', y);
       }
@@ -72,7 +72,7 @@
           position="0 2 -5"
           shadow="cast: true;"
           scale="5 5 5"
-          onmouseover="kule(event)" 
+          onclick="kule(event)" 
           animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 35000; loop: 1000; from: 0;"
           gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Fring-1.glb?v=1616516512585"
         ></a-entity>
@@ -81,7 +81,7 @@
           position="0 7 -5"
           shadow="cast: true;"
           scale="5 5 5"
-          onmouseover="kule(event)" 
+          onclick="kule(event)" 
           animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 25000; loop: 1000; from: 0;"
           gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Falfa-3.glb?v=1616515856727"
         ></a-entity>

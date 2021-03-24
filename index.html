@@ -29,6 +29,11 @@
     console.log(event.target.getAttribute('position'));
       event.target.setAttribute('position', x);
     }
+    function cam(event){
+    
+    console.log(event.target.getAttribute('position'),event.target.getAttribute('rotation'));
+      
+    }
       
     
     </script>
@@ -62,6 +67,7 @@
           position="0 2 -5"
           shadow="cast: true;"
           scale="5 5 5"
+          onclick="cam(event)" 
           animation="property: object3D.rotation.y; to: 360; dir: loop; dur: 35000; loop: 1000; from: 0;"
           gltf-model="https://cdn.glitch.com/0e2e13c0-569c-4364-9b15-49f34d300133%2Fring-1.glb?v=1616516512585"
         ></a-entity>
@@ -95,15 +101,7 @@
         <div class="a-loader-title" style="display: none;">
           ART OPEN WEB VR • A-Frame
         </div>
-        <a-entity
-          camera=""
-          position="-15 20 35"
-          wasd-controls="fly: true"
-          rotation="-7.677634454753011 0.34377467707849674 0"
-          look-controls=""
-          aframe-injected=""
-          data-aframe-inspector-original-camera=""
-        ></a-entity>
+        <a-entity camera="" id="cam" position="-3.39661458356642 7.54798757204328 30.36275955679056" wasd-controls="fly: true" rotation="-33.720452718416094 -20.80372024620678 230" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
         <div class="a-enter-vr" aframe-injected="">
           <button
             class="a-enter-vr-button"
@@ -121,8 +119,8 @@
         <div class="a-orientation-modal a-hidden" aframe-injected="">
           <button aframe-injected="">Exit VR</button>
         </div>
-        <a-entity light="intensity: 0.2; castShadow: true" position="-8.98723 37.68641 -16.96958" data-aframe-default-light="" aframe-injected=""></a-entity>
-        <a-entity light="intensity: 2; castShadow: true; color: #adfacb; groundColor: #ededed; distance: 2" position="-10.44717 18.53346 -16.64492" data-aframe-default-light="" aframe-injected=""></a-entity>
+        
+        <a-entity light="intensity: 2; castShadow: true; color: #adfacb; groundColor: #ededed; distance: 2; shadowCameraNear: -50; shadowCameraTop: 50; shadowCameraRight: 50; shadowCameraBottom: -30; shadowCameraLeft: -50" position="-0.33399 28.06038 -7.88702" data-aframe-default-light="" aframe-injected=""></a-entity>
       </a-entity>
     </a-scene>
   </body>

@@ -96,6 +96,22 @@
           >
           
         </a-sphere>
+        
+        <a-sphere onclick="sphere(event)"  visible="true" position="-10 10 2" radius="1" material="color: #23C495;" geometry="" shadow="cast: true; receive: true;"
+          animation__mouseenter="property: components.material.material.color; type: color; to: #141414;startEvents: mouseenter; dur: 500"
+          animation__mouseleave="property: components.material.material.color; type: color; to: #23C495; startEvents: mouseleave; dur: 500"
+          animation="property: object3D.position.y; to: 2; dir: alternate; dur: 5000; loop: 5000; from: 10;"
+          >
+          
+        </a-sphere>
+        
+        <a-sphere onclick="sphere(event)"  visible="true" position="8 3 -5" radius="1" material="color: #23C495;" geometry="" shadow="cast: true; receive: true;"
+          animation__mouseenter="property: components.material.material.color; type: color; to: #141414;startEvents: mouseenter; dur: 500"
+          animation__mouseleave="property: components.material.material.color; type: color; to: #23C495; startEvents: mouseleave; dur: 500"
+          animation="property: object3D.position.y; to: 10; dir: alternate; dur: 5000; loop: 5000; from: 3;"
+          >
+          
+        </a-sphere>
 
 
         <div class="a-loader-title" style="display: none;">
